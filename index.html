@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Determinant Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="DeterminantCalcu.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" class="logo">
+        <h1>Determinant Calculator</h1>
+        <p class="description">
+            A simple tool for finding the determinant of a square matrix up to 10 x 10
+            and determining whether it is singular or nonsingular.
+        </p>
+    </header>
+
+    <div id="upper">
+        <div id="matrix" class="parent">
+            <p>Enter Matrix Dimensions (n x n)</p>
+            <input type="number" id="matrixSize" min="1" max="10">
+
+            <button id="generateMatrix">Generate Matrix</button>
+
+            <div id="matrixInputs" style="margin-top:10px;"></div>
+
+            <button id="calculateDet" style="display:none; margin-top:10px;">Calculate</button>
+			
+			<button id="resetMatrix" style="display:none; margin-top:10px; margin-left:10px;">Reset</button>
+		
+            <textarea wrap="soft" rows="10" cols="40" id="console" disabled style="display:none; margin-top:10px;"></textarea>
+        </div>
+
+    </div>
+		
+	<div id="footer">
+		<span class="block">BSCS 2-5</span><br>
+			Acar, Hannah Cassandra<br>
+			Aspa, Angelica<br>
+			Dagdag, Shekinah Nissi<br>
+			Manango, Elyssa Marie<br>
+			Perez, Anne Tricia
+	</div>
+
+</body>
+</html>
