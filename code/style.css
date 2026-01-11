@@ -1,0 +1,14 @@
+header {
+    text-align: center; 
+}
+
+body{
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;        
+    border-radius: 50%;
+    object-fit: cover; 
+} 
