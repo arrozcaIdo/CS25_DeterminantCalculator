@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const matrixInputsDiv = document.getElementById("matrixInputs");
   const calculateBtn = document.getElementById("calculateDet");
   const consoleArea = document.getElementById("console");
+  const resetBtn = document.getElementById("resetMatrix");
   
   generateBtn.addEventListener("click", () => {
     const n = parseInt(matrixSizeInput.value);
@@ -90,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // calculate button
     calculateBtn.style.display = "inline-block";
+    resetBtn.style.display = "inline-block";
 
     for (let i = 0; i < n; i++) {
       const rowDiv = document.createElement("div");
@@ -133,5 +135,13 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (err) {
       alert(err.message);
     }
+
+  resetBtn.addEventListener("click", () => {
+    matrixInputsDiv.innerHTML = "";
+    consoleArea.style.display = "none";
+    consoleArea.value = "";
+    matrixSizeInput.value = "";
+    calculateBtn.style.display = "none";
+    resetBtn.style.display = "none";
   });
 });
