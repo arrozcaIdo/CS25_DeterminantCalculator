@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const matrixSizeInput = document.getElementById("matrixSize");
   const matrixInputsDiv = document.getElementById("matrixInputs");
   const calculateBtn = document.getElementById("calculateDet");
-  const consoleArea = document.getElementById("console");
   const resetBtn = document.getElementById("resetMatrix");
+  const consoleArea = document.getElementById("console");
   
   generateBtn.addEventListener("click", () => {
     const n = parseInt(matrixSizeInput.value);
@@ -93,14 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
     calculateBtn.style.display = "inline-block";
     resetBtn.style.display = "inline-block";
 
-    // for label, coded here instead sa html/css cuz it depends on user input
-    const matrixLabel = document.createElement("p");
-    matrixLabel.id = "matrixLabel";
-    matrixLabel.textContent = `${n} x ${n} Matrix`;
-    matrixLabel.style.fontWeight = "bold";  
-    matrixLabel.style.marginTop = "10px"; 
-    matrixInputsDiv.appendChild(matrixLabel);
-
     for (let i = 0; i < n; i++) {
       const rowDiv = document.createElement("div");
       rowDiv.className = "matrix-row";
@@ -113,7 +105,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       matrixInputsDiv.appendChild(rowDiv);
     }
+
+    // for label, coded here instead sa html/css cuz it depends on user input
+    const matrixLabel = document.createElement("p");
+    matrixLabel.id = "matrixLabel";
+    matrixLabel.textContent = `${n} x ${n} Matrix`;
+    matrixLabel.style.fontWeight = "bold";  
+    matrixLabel.style.marginTop = "10px"; 
+    matrixInputsDiv.appendChild(matrixLabel);
   });
+
 
   calculateBtn.addEventListener("click", () => {
     const n = parseInt(matrixSizeInput.value);
@@ -143,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (err) {
       alert(err.message);
     }
+  });
 
   resetBtn.addEventListener("click", () => {
     matrixInputsDiv.innerHTML = "";
