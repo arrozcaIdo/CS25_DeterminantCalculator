@@ -76,15 +76,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const matrixInputsDiv = document.getElementById("matrixInputs");
   const calculateBtn = document.getElementById("calculateDet");
   const consoleArea = document.getElementById("console");
-
+  
   generateBtn.addEventListener("click", () => {
     const n = parseInt(matrixSizeInput.value);
-    if (!n || n < 1 || n > 10) {
-      alert("Please enter a number between 1 and 10.");
+    if (!n || n < 2 || n > 10) {
+      alert("Please enter a number between 2 and 10.");
       return;
     }
 
     matrixInputsDiv.innerHTML = "";
+    consoleArea.style.display = "none"; // hide results until calculate
+    consoleArea.value = "";
+
+    // calculate button
+    calculateBtn.style.display = "inline-block";
 
     for (let i = 0; i < n; i++) {
       const rowDiv = document.createElement("div");
@@ -120,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const result = classifyMatrix(matrix);
+       consoleArea.style.display = "block"; // show results txtarea
       consoleArea.value = "";
       for (const key in result) {
         consoleArea.value += `${key} ${result[key]}\n`;
