@@ -58,7 +58,7 @@ function determinant(A) {
 function classifyMatrix(A) {
   const det = determinant(A);
   const classification = Math.abs(det) <= EPS ? "singular" : "non-singular";
-  return { "The matrix determinant is:": det, "classification": classification };
+  return { "The matrix determinant is:": det, "classification:": classification };
 }
 
 //sample run to check if logic workzzzz
