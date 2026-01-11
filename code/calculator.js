@@ -1,5 +1,6 @@
 const EPS = 1e-10; 
 
+// separated the program into 2 parts (1) logic, (2) UI
 function isSquareMatrix(A) {
   if (!Array.isArray(A) || A.length === 0) return false;
   const n = A.length;
@@ -60,7 +61,6 @@ function classifyMatrix(A) {
   return { "The matrix determinant is:": det, "classification": classification };
 }
 
-
 //sample run to check if logic workzzzz
 /*const example = [
   [2, 3, 1],
@@ -69,26 +69,63 @@ function classifyMatrix(A) {
 ];
 console.log(classifyMatrix(example));*/
 
-const example = [
-  [2, 3, 1, 5, 7],
-  [4, 1, -3, 2, 9],
-  [0, 5, 2, 1, 3],
-  [1, 2, 3, 4, 5],
-  [5, 4, 3, 2, 1]
-];
-console.log(classifyMatrix(example)); //5x5 matrix test
+// UI, for easier html implementation
+document.addEventListener("DOMContentLoaded", () => {
+  const generateBtn = document.getElementById("generateMatrix");
+  const matrixSizeInput = document.getElementById("matrixSize");
+  const matrixInputsDiv = document.getElementById("matrixInputs");
+  const calculateBtn = document.getElementById("calculateDet");
+  const consoleArea = document.getElementById("console");
 
-//10x10 matrix test
-const example10x10 = [
-  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 0, 1, 2, 3, 4, 5, 6, 7, 8],
-  [2, 1, 0, 1, 2, 3, 4, 5, 6, 7],
-  [3, 2, 1, 0, 1, 2, 3, 4, 5, 6],
-  [4, 3, 2, 1, 0, 1, 2, 3, 4, 5],
-  [5, 4, 3, 2, 1, 0, 1, 2, 3, 4],
-  [6, 5, 4, 3, 2, 1, 0, 1, 2, 3],
-  [7, 6, 5, 4, 3, 2, 1, 0, 1, 2],
-  [8, 7, 6, 5, 4, 3, 2, 1, 0, 1]
-];
-console.log(classifyMatrix(example10x10));
+  generateBtn.addEventListener("click", () => {
+    const n = parseInt(matrixSizeInput.value);
+    if (!n || n < 1 || n > 10) {
+      alert("Please enter a number between 1 and 10.");
+      return;
+    }
+
+    matrixInputsDiv.innerHTML = "";
+
+    for (let i = 0; i < n; i++) {
+      const rowDiv = document.createElement("div");
+      rowDiv.className = "matrix-row";
+      for (let j = 0; j < n; j++) {
+        const input = document.createElement("input");
+        input.type = "number";
+        input.className = "matrix-input";
+        input.id = `cell-${i}-${j}`;
+        rowDiv.appendChild(input);
+      }
+      matrixInputsDiv.appendChild(rowDiv);
+    }
+  });
+
+  calculateBtn.addEventListener("click", () => {
+    const n = parseInt(matrixSizeInput.value);
+    if (!n) return;
+
+    const matrix = [];
+    for (let i = 0; i < n; i++) {
+      const row = [];
+      for (let j = 0; j < n; j++) {
+        const value = parseFloat(document.getElementById(`cell-${i}-${j}`).value);
+        if (isNaN(value)) {
+          alert("Please fill all matrix fields.");
+          return;
+        }
+        row.push(value);
+      }
+      matrix.push(row);
+    }
+
+    try {
+      const result = classifyMatrix(matrix);
+      consoleArea.value = "";
+      for (const key in result) {
+        consoleArea.value += `${key} ${result[key]}\n`;
+      }
+    } catch (err) {
+      alert(err.message);
+    }
+  });
+});
