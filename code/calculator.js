@@ -93,6 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
     calculateBtn.style.display = "inline-block";
     resetBtn.style.display = "inline-block";
 
+    // for label, coded here instead sa html/css cuz it depends on user input
+    const matrixLabel = document.createElement("p");
+    matrixLabel.id = "matrixLabel";
+    matrixLabel.textContent = `${n} x ${n} Matrix`;
+    matrixLabel.style.fontWeight = "bold";  
+    matrixLabel.style.marginTop = "10px"; 
+    matrixInputsDiv.appendChild(matrixLabel);
+
     for (let i = 0; i < n; i++) {
       const rowDiv = document.createElement("div");
       rowDiv.className = "matrix-row";
