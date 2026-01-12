@@ -1,4 +1,4 @@
-# CS25_MatrixCalculator
+# CS25_DeterminantCalculator
 
 This tool calculates the determinant of square matrices of sizes 2 × 2 up to 10 × 10. It also determines whether the matrix is singular or non-singular.
 
