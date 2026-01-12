@@ -1,4 +1,4 @@
-# CS25_DeterminantCalculator
+# Determinant Calculator | BSCS 2-5
 
 This tool calculates the determinant of square matrices of sizes 2 × 2 up to 10 × 10. It also determines whether the matrix is singular or non-singular.
 
