@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const calculateBtn = document.getElementById("calculateDet");
   const resetBtn = document.getElementById("resetMatrix");
   const consoleArea = document.getElementById("console");
+  const matrixHint = document.getElementById("matrixHint");
   
   generateBtn.addEventListener("click", () => {
     const n = parseInt(matrixSizeInput.value);
@@ -89,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     consoleArea.style.display = "none"; // hide results until calculate
     consoleArea.value = "";
 
-    // calculate button
+    matrixHint.style.display = "block";
     calculateBtn.style.display = "inline-block";
     resetBtn.style.display = "inline-block";
 
@@ -151,6 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     consoleArea.style.display = "none";
     consoleArea.value = "";
     matrixSizeInput.value = "";
+    matrixHint.style.display = "none";
     calculateBtn.style.display = "none";
     resetBtn.style.display = "none";
   });
