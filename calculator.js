@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       for (let j = 0; j < n; j++) {
         const value = parseFloat(document.getElementById(`cell-${i}-${j}`).value);
         if (isNaN(value)) {
-          alert("Please fill all matrix fields.");
+          alert("Please fill all matrix fields with valid integer inputs only.");
           return;
         }
         row.push(value);
