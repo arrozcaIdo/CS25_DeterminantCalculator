@@ -61,6 +61,14 @@ function classifyMatrix(A) {
   return { "The matrix determinant is:": det, "Classification:": classification };
 }
 
+//sample run to check if logic workzzzz
+/*const example = [
+  [2, 3, 1],
+  [4, 1, -3],
+  [0, 5, 2]
+];
+console.log(classifyMatrix(example));*/
+
 // UI, for easier html implementation
 document.addEventListener("DOMContentLoaded", () => {
   const generateBtn = document.getElementById("generateMatrix");
@@ -118,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       for (let j = 0; j < n; j++) {
         const value = parseFloat(document.getElementById(`cell-${i}-${j}`).value);
         if (isNaN(value)) {
-          alert("Please fill all matrix fields with valid integer inputs only.");
+          alert("Please fill all matrix fields.");
           return;
         }
         row.push(value);
@@ -128,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const result = classifyMatrix(matrix);
-      document.querySelector(".answer-area").style.display = "block";
+       consoleArea.style.display = "block"; // show results txtarea
       consoleArea.value = "";
       for (const key in result) {
         consoleArea.value += `${key} ${result[key]}\n`;
