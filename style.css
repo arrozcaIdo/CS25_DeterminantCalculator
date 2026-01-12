@@ -121,7 +121,7 @@ button:active {
     position: fixed;        
     bottom: 15px;           
     left: 20px;             
-    font-size: 10px;        
+    font-size: 12px;        
     color: #888;           
     font-family: 'Courier New', Courier, monospace;
     text-align: left;      
@@ -131,7 +131,7 @@ button:active {
 
 #footer .block {
     font-weight: bold;      
-    font-size: 12px;       
+    font-size: 16px;       
     color: #555;           
 }
 
