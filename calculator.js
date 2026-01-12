@@ -61,14 +61,6 @@ function classifyMatrix(A) {
   return { "The matrix determinant is:": det, "Classification:": classification };
 }
 
-//sample run to check if logic workzzzz
-/*const example = [
-  [2, 3, 1],
-  [4, 1, -3],
-  [0, 5, 2]
-];
-console.log(classifyMatrix(example));*/
-
 // UI, for easier html implementation
 document.addEventListener("DOMContentLoaded", () => {
   const generateBtn = document.getElementById("generateMatrix");
