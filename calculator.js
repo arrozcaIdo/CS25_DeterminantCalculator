@@ -61,14 +61,6 @@ function classifyMatrix(A) {
   return { "The matrix determinant is:": det, "Classification:": classification };
 }
 
-//sample run to check if logic workzzzz
-/*const example = [
-  [2, 3, 1],
-  [4, 1, -3],
-  [0, 5, 2]
-];
-console.log(classifyMatrix(example));*/
-
 // UI, for easier html implementation
 document.addEventListener("DOMContentLoaded", () => {
   const generateBtn = document.getElementById("generateMatrix");
@@ -77,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const calculateBtn = document.getElementById("calculateDet");
   const resetBtn = document.getElementById("resetMatrix");
   const consoleArea = document.getElementById("console");
+  const consoleBox = document.getElementById("consoleBox");
   const matrixHint = document.getElementById("matrixHint");
   
   generateBtn.addEventListener("click", () => {
@@ -87,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     matrixInputsDiv.innerHTML = "";
-    consoleArea.style.display = "none"; // hide results until calculate
+    consoleBox.style.display = "none";
     consoleArea.value = "";
 
     matrixHint.style.display = "block";
@@ -107,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
       matrixInputsDiv.appendChild(rowDiv);
     }
 
-    // for label, coded here instead sa html/css cuz it depends on user input
     const matrixLabel = document.createElement("p");
     matrixLabel.id = "matrixLabel";
     matrixLabel.textContent = `${n} x ${n} Matrix`;
@@ -115,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
     matrixLabel.style.marginTop = "10px"; 
     matrixInputsDiv.appendChild(matrixLabel);
   });
-
 
   calculateBtn.addEventListener("click", () => {
     const n = parseInt(matrixSizeInput.value);
@@ -137,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const result = classifyMatrix(matrix);
-       consoleArea.style.display = "block"; // show results txtarea
+      consoleBox.style.display = "block";
       consoleArea.value = "";
       for (const key in result) {
         consoleArea.value += `${key} ${result[key]}\n`;
@@ -149,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   resetBtn.addEventListener("click", () => {
     matrixInputsDiv.innerHTML = "";
-    consoleArea.style.display = "none";
+    consoleBox.style.display = "none";
     consoleArea.value = "";
     matrixSizeInput.value = "";
     matrixHint.style.display = "none";
