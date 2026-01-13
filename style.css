@@ -22,8 +22,10 @@ header {
 #upper {
     min-height: calc(100vh - 180px);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;  
+    align-items: flex-start; 
+    flex-direction: column;   
+    padding-top: 20px;        
 }
 
 .logo {
@@ -125,6 +127,13 @@ button:active {
     background-color: #fff;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     text-align: center;
+
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    text-align: center;
+    white-space: pre-line;     
+    margin-top: 10px; 
   
 }
 
