@@ -118,12 +118,7 @@ button:active {
     background-color: #fff;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 
-    display: flex;               
-    justify-content: center;    
-    align-items: center;      
-    text-align: center;         
-    white-space: pre-line;      
-    padding: 10px; 
+
 }
 
 #footer {
