@@ -117,8 +117,6 @@ button:active {
     color: #000000;
     background-color: #fff;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-
-
 }
 
 #footer {
@@ -143,3 +141,48 @@ button:active {
     background: #000;
     color: #fff;
 }
+
+#consoleBox {
+    width: 90%;
+    max-width: 520px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.console-title {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000;
+}
+
+.console-divider {
+    height: 1px;
+    background: #ddd;
+    margin: 10px 0;
+}
+
+#console {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    height: 110px;
+    text-align: center;
+}
+
+#upper {
+    display: flex;
+    justify-content: center;
+}
+
+.parent {
+    width: 100%;
+    max-width: 900px;
+}
+
