@@ -19,8 +19,8 @@ header {
     padding: 20px 0;
 }
 
-upper {
-    min-height: 100vh;
+#upper {
+    min-height: calc(100vh - 180px);
     display: flex;
     justify-content: center;
     align-items: center;
