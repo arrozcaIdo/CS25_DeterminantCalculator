@@ -19,14 +19,6 @@ header {
     padding: 20px 0;
 }
 
-#upper {
-    min-height: calc(100vh - 180px);
-    display: flex;
-    justify-content: center;  
-    align-items: flex-start; 
-    flex-direction: column;   
-    padding-top: 20px;        
-}
 
 .logo {
     width: 120px;
@@ -132,8 +124,7 @@ button:active {
     justify-content: center;   
     align-items: center;       
     text-align: center;
-    white-space: pre-line;     
-    margin-top: 10px; 
+    white-space: pre-line;      
   
 }
 
