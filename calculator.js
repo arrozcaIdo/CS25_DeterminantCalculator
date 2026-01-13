@@ -138,9 +138,9 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const result = classifyMatrix(matrix);
        consoleArea.style.display = "block"; // show results txtarea
-      consoleArea.textContent = "";
+      consoleArea.value = "";
       for (const key in result) {
-        consoleArea.textContent += `${key} ${result[key]}\n`;
+        consoleArea.value += `${key} ${result[key]}\n`;
       }
     } catch (err) {
       alert(err.message);
