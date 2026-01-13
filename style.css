@@ -144,8 +144,8 @@ button:active {
 
 #consoleBox {
     width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 100px;
+    margin: 0px auto;
     background: #ffffff;
     border-radius: 16px;
     padding: 16px;
@@ -165,16 +165,6 @@ button:active {
     height: 1px;
     background: #ddd;
     margin: 10px 0;
-}
-
-#console {
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    height: 110px;
-    text-align: center;
 }
 
 #upper {
