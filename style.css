@@ -107,8 +107,8 @@ button:active {
     max-width: 500px;
     height: 120px;
     font-size: 16px;
-    margin: 20px auto 0 auto;
-    padding: 12px;
+    margin: 10px auto;
+    padding: 0;
     border-radius: 12px;
     border: 1px solid #ccc;
     resize: none;
@@ -117,6 +117,10 @@ button:active {
     color: #000000;
     background-color: #fff;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    text-align: center;
+    line-height: 120px;
+    white-space: pre-line;
 }
 
 #footer {
