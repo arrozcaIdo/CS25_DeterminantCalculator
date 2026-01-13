@@ -19,6 +19,13 @@ header {
     padding: 20px 0;
 }
 
+upper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
     width: 120px;
     height: 120px;         
