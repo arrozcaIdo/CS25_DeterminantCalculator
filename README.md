@@ -9,7 +9,7 @@ This project was created as a final requirement for MATH 206.
 
 1. Open the Determinant Calculator using the provided link below.
 
-2. Enter the desired matrix dimension (n × n, where 1 ≤ n ≤ 10) in the input box.
+2. Enter the desired matrix dimension (2 × 2 up to 10 x 10)  in the input box.
 
 3. Click Generate Matrix.
 
@@ -17,7 +17,7 @@ This project was created as a final requirement for MATH 206.
 
 5. Click Calculate to compute the determinant.
 
-6. Click Reset to generate another matrix.
+6. Click Reset to delete all the values.
 
 
 
