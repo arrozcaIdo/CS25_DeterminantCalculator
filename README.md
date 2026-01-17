@@ -7,7 +7,7 @@ This project was created as a final requirement for MATH 206.
 
 ## HOW TO USE
 
-1. Open the Determinant Calculator using the provided link.
+1. Open the Determinant Calculator using the provided link below.
 
 2. Enter the desired matrix dimension (n × n, where 1 ≤ n ≤ 10) in the input box.
 
